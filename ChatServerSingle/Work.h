@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 
-enum EWorkType
+enum class EWorkType
 {
     Accept,
     Release,
@@ -13,5 +13,5 @@ struct Work
 {
     uint64_t SessionID;
     EWorkType WorkType;
-    Serializer* Packet; // 0ÀÌ¸י Release
+    Serializer* Packet; // Accept, Release - nullptr
 };
